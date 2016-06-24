@@ -107,6 +107,15 @@ flexible-text-container {
     position: absolute !important;
 }
 
+.custom-full-width-image-text {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.custom-full-width-image-text img {
+    width: 100%;
+}
+
 .how-we-work-homepage p {
     font-family: 'Raleway-SemiBold';
 }
@@ -121,6 +130,9 @@ flexible-text-container {
     .flexible-text-container p.up-text, .flexible-text-container p.down-text {
         font-size: 20px;
     } 
+    .flexible-text {
+        margin-top: -17px !important;        
+    }
 }
 
 /* Browser Reset */
