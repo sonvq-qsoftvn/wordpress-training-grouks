@@ -1,0 +1,20 @@
+.show_if_tc_ticket{
+    display: none;
+}
+
+.order-table hr{
+    display: none;
+}
+
+.order-table label{
+    color: #777;
+    font-weight: normal;
+}
+
+.order-table th label:after{
+    content: ": ";
+}
+
+h4.woo-order-details-extras-header{
+    margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+.barcode_holder{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+}
+
+input[type=text]#barcode{
+    width: 350px;
+}
+.barcode_status.default{
+    color: #000;
+}
+
+.barcode_status.success{
+    color: green;
+}
+
+.barcode_status.error,
+.barcode_status.error_exists{
+    color: red;
+}
