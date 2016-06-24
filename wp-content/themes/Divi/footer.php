@@ -30,15 +30,30 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 			<?php endif; ?>
 
 				<div id="footer-bottom">
-					<div class="container clearfix">
-				<?php
-					if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
-						get_template_part( 'includes/social_icons', 'footer' );
-					}
-				?>
-
-						<p id="footer-info"><?php printf( et_get_safe_localization( __( 'Designed by %1$s | Powered by %2$s', 'Divi' ) ), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
-					</div>	<!-- .container -->
+                                    <div class="container clearfix">
+                                        <div class="et_pb_row footer-block-container">
+                                            
+                                            <div class="et_pb_column et_pb_column_1_3 footer-text">
+                                                <p id="footer-info">
+                                                    Chaussée de saint job 247, <br><br>1180 Bruxelles<br>+32 (0) 479 72 01 26<br><br>contact@grouks.be
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="et_pb_column et_pb_column_1_3 footer-logo">
+                                                <a href="http://localhost/grouks/">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" title="Grouks logo." alt="Grouks logo" data-actual-width="211" data-actual-height="67" />
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="et_pb_column et_pb_column_1_3 footer-social">
+                                                <?php
+                                                        if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
+                                                                get_template_part( 'includes/social_icons', 'footer' );
+                                                        }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>	<!-- .container -->
 				</div>
 			</footer> <!-- #main-footer -->
 		</div> <!-- #et-main-area -->

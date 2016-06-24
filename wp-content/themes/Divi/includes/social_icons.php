@@ -33,5 +33,9 @@
 		</a>
 	</li>
 <?php endif; ?>
-
+    <li class="et-social-icon et-social-linkedin">
+        <a href="https://www.linkedin.com/" class="icon">
+            <span><?php esc_html_e( 'LinkedIn', 'Divi' ); ?></span>
+        </a>
+    </li>   
 </ul>

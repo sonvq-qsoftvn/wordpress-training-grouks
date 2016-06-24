@@ -28,6 +28,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	font-weight: normal;  
 }
 
+.contact-form-homepage input[type="text"] {
+    padding: 11px !important;
+}
+.contact-form-homepage .et_contact_bottom_container {
+    float: none;
+    text-align: center;
+}
+
+.contact-form-homepage button:after {
+    font-size: 24px;
+    opacity: 1;
+    margin-left: .3em;
+    left: auto;
+}
+
+.contact-form-homepage form p {
+    margin-bottom: 22px;
+}
 #et-top-navigation {
     font-family: 'Raleway-Bold' !important;
 }
@@ -93,13 +111,16 @@ flexible-text-container {
     font-family: 'Raleway-SemiBold';
 }
 .how-we-work-paragraph p {
-    margin-bottom: 25px;
+    margin-bottom: 31px;
 }
 @media all and (max-width: 768px) {
     .image-fullwidth-block p {
         font-size: 15px;      
         margin-top: -27px;
     }
+    .flexible-text-container p.up-text, .flexible-text-container p.down-text {
+        font-size: 20px;
+    } 
 }
 
 /* Browser Reset */
@@ -9679,6 +9700,35 @@ li.et_pb_social_icon a span {
 /* Icons */
 .et-social-facebook a.icon:before {
 	content: "\e093";
+}
+
+p#footer-info {
+    font-family: Raleway;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.18em;
+    text-align: center;
+    color: #797c7a;
+}
+
+#footer-bottom {
+    background: none;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+#footer-bottom a {
+    color: #2e6594;
+    font-size: 19px;
+}
+.footer-social {
+    padding-top: 28px !important;
+}
+
+.footer-block-container {
+    padding-top: 52px !important;
 }
 
 .et-social-twitter a.icon:before {

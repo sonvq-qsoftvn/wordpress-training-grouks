@@ -33,6 +33,7 @@
 		$et_pb_first_row = $( 'body.et_pb_pagebuilder_layout .et_pb_section:first-child' );
 
 	$(document).ready( function(){
+            $('.contact-form-homepage button').html('SEND');
             function drawLine() {
                 if ($('p.down-text').length) {
                     var offset = $('.flexible-text').position();
