@@ -122,6 +122,13 @@ flexible-text-container {
 .how-we-work-paragraph p {
     margin-bottom: 31px;
 }
+
+@media all and (max-width: 980px) {
+    .et_pb_blurb_content {
+        margin: auto !important;
+    }
+}
+
 @media all and (max-width: 768px) {
     .image-fullwidth-block p {
         font-size: 15px;      
@@ -3070,7 +3077,7 @@ div.pp_overlay {
 
 /* Bottom Bar */
 #footer-bottom {
-	padding: 15px 0 5px;
+	padding: 15px 0 15px;
 	background-color: #1f1f1f;
 	background-color: rgba(0, 0, 0, 0.32);
 }
