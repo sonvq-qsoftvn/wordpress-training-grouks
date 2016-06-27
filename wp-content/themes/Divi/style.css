@@ -156,6 +156,56 @@ flexible-text-container {
     margin-top: -2px;
 }
 
+.training-content-block h1 {
+    text-align: center;
+    font-family: 'Raleway-ExtraBold';
+    padding-top: 15px;
+    padding-bottom: 41px;
+}
+
+.contact-form-contact-page .et_contact_bottom_container { 
+    float: none;
+    text-align: center;
+}
+
+.contact-form-contact-page label, .contact-form-contact-page input {
+    display: inline-block;
+    float: left;
+}
+
+.contact-form-contact-page .et_pb_contact p input, .contact-form-contact-page .et_pb_contact p textarea {
+    width: 70%;
+}
+
+.contact-form-contact-page .et_pb_contact p label {
+    width: 30%;
+    text-align: right;
+    padding-right: 22px;
+    color: #360134;
+    font-weight: 900;
+    font-size: 15px;
+    font-family: 'Raleway-Bold';
+    line-height: 48px;
+}
+
+.contact-form-contact-page .et_pb_contact textarea, .contact-form-contact-page .et_pb_contact_field:last-of-type {
+    height: 180px;
+}
+.contact-form-contact-page .et_pb_contact_field {
+    height: 48px;
+    margin-bottom: 21px;
+}
+
+
+.contact-form-contact-page .et_pb_contact, .contact-form-contact-page .et-pb-contact-message {
+    width: 69%;
+    margin: auto;
+}
+
+.contact-form-contact-page .et-pb-contact-message {
+    padding-left: 20%;
+}
+
 .how-we-work-homepage p {
     font-family: 'Raleway-SemiBold';
 }
@@ -186,6 +236,20 @@ flexible-text-container {
     } 
     .flexible-text {
         margin-top: -17px !important;        
+    }
+    
+    .contact-form-contact-page .et_pb_contact, .contact-form-contact-page .et-pb-contact-message {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 479px) { 
+    .contact-form-contact-page .et_pb_contact p label {
+        display: none;
+    }
+    
+    .contact-form-contact-page .et_pb_contact p input, .contact-form-contact-page .et_pb_contact p textarea {
+        width: 100%;
     }
 }
 

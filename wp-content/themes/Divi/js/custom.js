@@ -34,6 +34,7 @@
 
 	$(document).ready( function(){
             $('.contact-form-homepage button').html('SEND');
+            $('.contact-form-contact-page button').html('SEND');
             function drawLine() {
                 if ($('p.down-text').length) {
                     var offset = $('.flexible-text').position();
