@@ -112,8 +112,48 @@ flexible-text-container {
     max-width: 100% !important;
 }
 
+.custom-full-width-image-text .mobile-image {
+    display: none;
+}
+.custom-full-width-image-text .desktop-image {
+    display: block;
+}
+
+
+.about-grouks-text-block h1 {
+    font-family: 'Raleway-ExtraBold';
+    padding-bottom: 26px;
+}
+
+.about-content-block h1 {
+    font-family: 'Raleway-ExtraBold';
+    text-align: center;
+    padding-bottom: 42px;
+}
+
+.about-content-block h2 {
+    font-family: 'Raleway-Bold';
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.27em;
+    color: #2e6594;
+    text-align: center;
+    padding-bottom: 22px;
+}
+
+.about-grouks-text-block {
+    display: table;
+    height: 100%;
+}
+
+.about-grouks-text-block .centered-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .custom-full-width-image-text img {
     width: 100%;
+    margin-top: -2px;
 }
 
 .how-we-work-homepage p {
@@ -126,6 +166,13 @@ flexible-text-container {
 @media all and (max-width: 980px) {
     .et_pb_blurb_content {
         margin: auto !important;
+    }
+    
+    .custom-full-width-image-text .mobile-image {
+        display: block;
+    }
+    .custom-full-width-image-text .desktop-image {
+        display: none;
     }
 }
 
