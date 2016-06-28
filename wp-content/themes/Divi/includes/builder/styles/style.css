@@ -485,6 +485,8 @@ span.et_pb_value_text.et_pb_on_value { color: #FFF; }
 .et-pb-option-container select, .et-pb-option-container .et-pb-font-select, #et_pb_select_category { width: 298px; }
 .et-pb-option-container input.et-pb-upload-field { width: 462px; }
 .et-pb-option-container input.et_pb_address, .et-pb-option-container input.et_pb_pin_address { width: 543px !important; }
+.et-pb-option-container input.et_pb_google_api_key { width: 521px !important; background: #ffffff; border: 1px solid #EAEDF0; }
+.et-pb-option-container input.et_pb_google_api_key.et_pb_hidden_field { display: none !important; }
 .et-pb-option-container input.et-pb-upload-field.et_pb_video_overlay { width: 202px; }
 .et-pb-option-container .wp-color-result { width: 258px; vertical-align: middle; }
 
@@ -521,7 +523,8 @@ span.et_pb_value_text.et_pb_on_value { color: #FFF; }
 .et-pb-option-container .description { margin-top: 10px; }
 .et-pb-option-main-content .description { margin-top: 15px; }
 
-.et-pb-option-container .button.et_pb_find_address { line-height: 40px !important; margin-left: 15px !important; }
+.et-pb-option-container .button.et_pb_find_address, .et-pb-option-container .button.et_pb_update_google_key { line-height: 40px !important; margin-left: 15px !important; }
+.et-pb-option-container .button.et_pb_update_google_key.et_pb_no_field_visible { margin-left: 0 !important; }
 
 span.et-pb-reset-setting, span.et-pb-reset-settings { width: 13px; height: 16px; margin-left: 10px; top: 0; display: inline-block; position: relative; cursor: pointer; }
 span.et-pb-reset-setting { opacity: 0; position: relative; z-index: -1; }

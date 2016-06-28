@@ -3335,7 +3335,7 @@ if ( !class_exists( 'TC' ) ) {
 
 			wp_enqueue_script( $this->name . '-chosen', $this->plugin_url . 'js/chosen.jquery.min.js', array( $this->name . '-admin' ), false, false );
 
-			wp_enqueue_style( $this->name . '-admin-jquery-ui', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css', array(), $this->version );
+//			wp_enqueue_style( $this->name . '-admin-jquery-ui', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css', array(), $this->version );
 
 			wp_enqueue_style( $this->name . '-chosen', $this->plugin_url . 'css/chosen.min.css', array(), $this->version );
 			wp_enqueue_script( $this->name . '-simple-dtpicker', $this->plugin_url . 'js/jquery.simple-dtpicker.js', array( 'jquery' ), $this->version );

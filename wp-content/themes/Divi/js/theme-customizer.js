@@ -4,7 +4,7 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function( $ ) {    
+( function( $ ) {
 	var $et_pb_section 		= $( '.et_pb_section' ),
 		$et_transparent_nav = $( '.et_transparent_nav' ),
 		$et_vertical_nav 	= $( '.et_vertical_nav' );

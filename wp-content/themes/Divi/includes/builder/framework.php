@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'et_builder_load_global_functions_script', 7 )
 function et_builder_load_modules_styles() {
 	$current_page_id = apply_filters( 'et_is_ab_testing_active_post_id', get_the_ID() );
 
-	wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'v' => 3, 'sensor' => 'false' ), is_ssl() ? 'https://maps-api-ssl.google.com/maps/api/js' : 'http://maps.google.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
+	wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key(), 'callback' => 'initMap' ), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), ET_BUILDER_VERSION, true );
 	wp_enqueue_script( 'divi-fitvids', ET_BUILDER_URI . '/scripts/jquery.fitvids.js', array( 'jquery' ), ET_BUILDER_VERSION, true );
 	wp_enqueue_script( 'waypoints', ET_BUILDER_URI . '/scripts/waypoints.min.js', array( 'jquery' ), ET_BUILDER_VERSION, true );
 	wp_enqueue_script( 'magnific-popup', ET_BUILDER_URI . '/scripts/jquery.magnific-popup.js', array( 'jquery' ), ET_BUILDER_VERSION, true );
@@ -196,6 +196,15 @@ function et_builder_load_framework() {
 		add_action( $action_hook, 'et_builder_init_global_settings' );
 		add_action( $action_hook, 'et_builder_add_main_elements' );
 	}
+}
+endif;
+
+if ( ! function_exists( 'et_pb_get_google_api_key' ) ) :
+function et_pb_get_google_api_key() {
+	$google_api_option = get_option( 'et_google_api_settings' );
+	$google_api_key = isset( $google_api_option['api_key'] ) ? $google_api_option['api_key'] : '';
+
+	return $google_api_key;
 }
 endif;
 

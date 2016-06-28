@@ -1,3 +1,18 @@
+version 2.7.8 ( updated 06-25-2016 )
+- Added Google Maps API setting ( Google no longer support keyless access )
+	* options_divi.php
+	* includes/builder/framework.php
+	* includes/builder/functions.php
+	* includes/builder/main-modules.php
+	* includes/builder/scripts/builder.js
+	* includes/builder/styles/style.css
+
+version 2.7.7 ( updated 06-23-2016 )
+- Fixed the issue with some custom hover styles not working for Buttons
+	* includes/builder/class-et-builder-element.php
+- Text Module: Removed excessive padding that was mistakenly added to the final paragraph
+	* style.css
+
 version 2.7.6 ( updated 06-21-2016 )
 - Fixed the issue with scroll-to position for anchor links that was calculated before the page had fully loaded
 	* functions.php

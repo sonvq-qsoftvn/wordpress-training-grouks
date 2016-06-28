@@ -1,5 +1,5 @@
 (function($){
-	$( document ).ready( function() {            
+	$( document ).ready( function() {
 		var ET_Select_Image = function(element, options){
 			this.element = element;
 			this.custom_select_link = null;

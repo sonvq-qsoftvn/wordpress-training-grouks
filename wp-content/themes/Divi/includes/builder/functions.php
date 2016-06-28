@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ET_BUILDER_PRODUCT_VERSION' ) ) {
 	// Note, when this is updated, you must also update corresponding version in builder.js: `window.et_builder_version`
-	define( 'ET_BUILDER_PRODUCT_VERSION', '2.7.6' );
+	define( 'ET_BUILDER_PRODUCT_VERSION', '2.7.8' );
 }
 
 if ( ! defined( 'ET_BUILDER_VERSION' ) ) {
@@ -1450,7 +1450,7 @@ function et_pb_add_builder_page_js_css(){
 	wp_enqueue_script( 'underscore' );
 	wp_enqueue_script( 'backbone' );
 
-	wp_enqueue_script( 'google-maps-api', esc_url( add_query_arg( array( 'v' => 3, 'sensor' => 'false' ), is_ssl() ? 'https://maps-api-ssl.google.com/maps/api/js' : 'http://maps.google.com/maps/api/js' ) ), array(), '3', true );
+	wp_enqueue_script( 'google-maps-api', esc_url( add_query_arg( array( 'key' => et_pb_get_google_api_key(), 'callback' => 'initMap' ), is_ssl() ? 'https://maps.googleapis.com/maps/api/js' : 'http://maps.googleapis.com/maps/api/js' ) ), array(), '3', true );
 	wp_enqueue_script( 'wp-color-picker' );
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_script( 'wp-color-picker-alpha', ET_BUILDER_URI . '/scripts/ext/wp-color-picker-alpha.min.js', array( 'jquery', 'wp-color-picker' ), ET_BUILDER_VERSION, true );
@@ -1580,6 +1580,8 @@ function et_pb_add_builder_page_js_css(){
 		'force_cache_purge' => (int) $force_cache_update,
 		'memory_limit_increased' => esc_html__( 'Your memory limit has been increased', 'et_builder' ),
 		'memory_limit_not_increased' => esc_html__( "Your memory limit can't be changed automatically", 'et_builder' ),
+		'google_api_key' => et_pb_get_google_api_key(),
+		'options_page_url' => et_pb_get_options_page_link(),
 	) ) );
 
 	wp_localize_script( 'et_pb_admin_js', 'et_pb_ab_js_options', apply_filters( 'et_pb_ab_js_options', array(
@@ -5148,4 +5150,12 @@ function et_pb_admin_excluded_shortcodes() {
 	}
 
 	return apply_filters( 'et_pb_admin_excluded_shortcodes', $shortcodes );
+}
+
+function et_pb_get_options_page_link() {
+	if ( et_is_builder_plugin_active() ) {
+		return admin_url( 'admin.php?page=et_divi_options#tab_et_dashboard_tab_content_api_main' );
+	}
+
+	return apply_filters( 'et_pb_theme_options_link', admin_url( 'admin.php?page=et_divi_options' ) );
 }

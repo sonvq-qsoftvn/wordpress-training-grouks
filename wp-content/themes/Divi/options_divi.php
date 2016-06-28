@@ -117,6 +117,18 @@ $options = array (
 				   "desc" => et_get_safe_localization( sprintf( __( 'Enter your MailChimp API key. You can create an api key <a target="_blank" href="%1$s">here</a>', $themename ), 'https://us3.admin.mailchimp.com/account/api/' ) ),
 			),
 
+			array(
+				"name"              => esc_html__( "Google API Key", $themename ),
+				"id"                => "et_google_api_settings_api_key",
+				"std"               => "",
+				"type"              => "text",
+				"validation_type"   => "nohtml",
+				'is_global'         => true,
+				'main_setting_name' => 'et_google_api_settings',
+				'sub_setting_name'  => 'api_key',
+				"desc"              => et_get_safe_localization( sprintf( __( 'The Maps module uses the Google Maps API and requires a valid Google API Key to function. Before using the map module, please make sure you have added your API key here. Learn more about how to create your Google API Key <a target="_blank" href="%1$s">here</a>.', $themename ), 'http://www.elegantthemes.com/gallery/divi/documentation/map/' ) ),
+			),
+
 			array( "name" => esc_html__( "Aweber Authorization", $themename ),
                    "type" => "callback_function",
 				   "desc" => esc_html__( 'Authorize your Aweber account here.', $themename ),

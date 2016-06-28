@@ -2952,7 +2952,7 @@ class ET_Builder_Element {
 				);
 
 				self::set_style( $function_name, array(
-					'selector'    => $css_element . ':hover',
+					'selector'    => $css_element_processed . ':hover',
 					'declaration' => rtrim( $main_element_styles_hover ),
 				) );
 

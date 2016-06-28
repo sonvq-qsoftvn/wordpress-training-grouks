@@ -11857,6 +11857,20 @@ class ET_Builder_Module_Map extends ET_Builder_Module {
 
 	function get_fields() {
 		$fields = array(
+			'google_api_key' => array(
+				'label'             => esc_html__( 'Google API Key', 'et_builder' ),
+				'type'              => 'text',
+				'option_category'   => 'basic_option',
+				'attributes'        => 'readonly',
+				'additional_button' => sprintf(
+					' <a href="%2$s" target="_blank" class="et_pb_update_google_key button" data-empty_text="%3$s">%1$s</a>',
+					esc_html__( 'Change API Key', 'et_builder' ),
+					esc_url( et_pb_get_options_page_link() ),
+					esc_attr__( 'Add Your API Key', 'et_builder' )
+				),
+				'class' => array( 'et_pb_google_api_key', 'et-pb-helper-field' ),
+				'description'       => et_get_safe_localization( sprintf( __( 'The Maps module uses the Google Maps API and requires a valid Google API Key to function. Before using the map module, please make sure you have added your API key inside the Divi Theme Options panel. Learn more about how to create your Google API Key <a href="%1$s" target="_blank">here</a>.', 'et_builder' ), esc_url( 'http://www.elegantthemes.com/gallery/divi/documentation/map/#gmaps-api-key' ) ) ),
+			),
 			'address' => array(
 				'label'             => esc_html__( 'Map Center Address', 'et_builder' ),
 				'type'              => 'text',
@@ -15769,6 +15783,20 @@ class ET_Builder_Module_Fullwidth_Map extends ET_Builder_Module {
 
 	function get_fields() {
 		$fields = array(
+			'google_api_key' => array(
+				'label'             => esc_html__( 'Google API Key', 'et_builder' ),
+				'type'              => 'text',
+				'option_category'   => 'basic_option',
+				'attributes'        => 'readonly',
+				'additional_button' => sprintf(
+					' <a href="%2$s" target="_blank" class="et_pb_update_google_key button" data-empty_text="%3$s">%1$s</a>',
+					esc_html__( 'Change API Key', 'et_builder' ),
+					esc_url( et_pb_get_options_page_link() ),
+					esc_attr__( 'Add Your API Key', 'et_builder' )
+				),
+				'class' => array( 'et_pb_google_api_key', 'et-pb-helper-field' ),
+				'description'       => et_get_safe_localization( sprintf( __( 'The Maps module uses the Google Maps API and requires a valid Google API Key to function. Before using the map module, please make sure you have added your API key inside the Divi Theme Options panel. Learn more about how to create your Google API Key <a href="%1$s" target="_blank">here</a>.', 'et_builder' ), esc_url( 'http://www.elegantthemes.com/gallery/divi/documentation/map/#gmaps-api-key' ) ) ),
+			),
 			'address' => array(
 				'label'             => esc_html__( 'Map Center Address', 'et_builder' ),
 				'type'              => 'text',
