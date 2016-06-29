@@ -465,9 +465,28 @@ flexible-text-container {
         display: inline-block;
         float: none !important;
     }
+    
+    .event-upcoming-list .et_pb_column .et_pb_module .et_pb_widget {
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
 }
 
 @media all and (max-width: 768px) {
+    .event-upcoming-list .event-date {
+        display: block;
+        width: 100%;
+    }
+    .event-upcoming-list .single-event-container {
+        width: 100%;
+    }
+    
+    .event-upcoming-list .event-content a {
+        margin-top: 10px;
+    }
+    .event-upcoming-list .event-content a.see-detail-event-button {
+        margin-top: 0px;
+    }
     .image-fullwidth-block p {
         font-size: 15px;      
         margin-top: -27px;
@@ -485,6 +504,21 @@ flexible-text-container {
 }
 
 @media all and (max-width: 479px) { 
+    .event-upcoming-list .event-content a {
+        line-height: 14px;
+    }
+    .event-upcoming-list .event-short-desc {
+        margin-top: 0px;
+    }
+    .event-upcoming-list .event-content {
+        width: 100%;
+    }
+    .event-upcoming-list .date-period, .event-upcoming-list .time-period, .event-upcoming-list .event-content a.see-detail-event-button {
+        margin-left: 0px;
+        display: block;
+        width: 100%;
+        margin-bottom: 7px;
+    }
     .contact-form-contact-page .et_pb_contact p label {
         display: none;
     }
