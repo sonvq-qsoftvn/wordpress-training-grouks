@@ -35,6 +35,8 @@ class TC_Shortcodes extends TC {
 		add_shortcode( 'event_tickets_sold', array( &$this, 'event_tickets_sold' ) );
 		add_shortcode( 'event_tickets_left', array( &$this, 'event_tickets_left' ) );
 		add_shortcode( 'tc_event_date', array( &$this, 'event_date' ) );
+        add_shortcode( 'tc_event_date_short', array( &$this, 'event_date_short' ) );                
+        add_shortcode( 'tc_event_date_blocks', array( &$this, 'event_date_blocks' ) );                        
 		add_shortcode( 'tc_event_location', array( &$this, 'event_location' ) );
 		add_shortcode( 'tc_event_terms', array( &$this, 'event_terms' ) );
 		add_shortcode( 'tc_event_sponsors_logo', array( &$this, 'event_sponsors_logo' ) );
@@ -226,6 +228,46 @@ class TC_Shortcodes extends TC {
 
 		return $event->get_event_date();
 	}
+        
+    function event_date_short ( $atts ) {
+		global $post;
+		extract( shortcode_atts( array(
+			'id'		 => '',
+			'event_id'	 => '',
+		), $atts ) );
+
+		if ( empty( $id ) && empty( $event_id ) ) {
+			$id = $post->ID;
+		}
+
+		if ( !empty( $event_id ) ) {
+			$id = $event_id;
+		}
+
+		$event = new TC_Event( $id );
+
+		return $event->get_event_date_short();
+	}
+    
+    function event_date_blocks ( $atts ) {
+		global $post;
+		extract( shortcode_atts( array(
+			'id'		 => '',
+			'event_id'	 => '',
+		), $atts ) );
+
+		if ( empty( $id ) && empty( $event_id ) ) {
+			$id = $post->ID;
+		}
+
+		if ( !empty( $event_id ) ) {
+			$id = $event_id;
+		}
+
+		$event = new TC_Event( $id );
+
+		return $event->get_event_date_blocks();
+	}    
 
 	function event_location( $atts ) {
 		global $post;

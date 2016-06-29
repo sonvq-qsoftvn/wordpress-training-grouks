@@ -266,6 +266,7 @@ if ( !class_exists( 'TC' ) ) {
 //load cart widget
 			require_once( $this->plugin_dir . 'includes/widgets/cart-widget.php' );
 			require_once( $this->plugin_dir . 'includes/widgets/upcoming-events-widget.php' );
+            require_once( $this->plugin_dir . 'includes/widgets/upcoming-events-page-widget.php' );
 
 			add_action( 'admin_init', array( &$this, 'generate_pdf_ticket' ), 0 );
 

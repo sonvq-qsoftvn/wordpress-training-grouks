@@ -1,2 +1,4 @@
 username: grouks-admin
 password: 6jEW*U)JoVOqa)Q#xs
+
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'localhost/test/', 'www.yourlivesite.com/');

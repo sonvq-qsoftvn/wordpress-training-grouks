@@ -33,6 +33,178 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     max-width: 520px;
 }
 
+.mobile_menu_bar:before {
+    color: #ec912d !important;
+}
+.event-upcoming-list .event-date {
+    width: 62px;
+    vertical-align: top;
+    margin-right: 32px;
+    padding-left: 15.4px;
+    padding-right: 15.4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #e8e8e8;
+    display: inline-block;
+}
+.event-upcoming-list .event-date .day {
+    font-family: 'Raleway-Bold';
+    font-size: 25.7px;
+    font-weight: bold;
+    color: #424544;
+}
+
+.event-upcoming-list .single-event-container {
+    display: inline-block;
+}
+
+.event-upcoming-list .event-content {
+    text-align: left;
+    width: calc(100% - 100px);
+    display: inline-block;
+}
+
+.event-upcoming-list .date-period {
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #ec912d;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-width: 84px;
+    line-height: 14px;
+    display: inline-block;
+}
+.event-upcoming-list .time-period {
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #2e6594;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-width: 84px;
+    line-height: 14px;
+    display: inline-block;
+    margin-left: 3px;
+}
+.event-upcoming-list .event-short-desc {
+    display: block;
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+    color: #424544;
+    margin-top: -5px;
+    line-height: 14px;
+    margin-bottom: 5px;
+}
+.event-upcoming-list .event-content a {
+    font-family: 'Raleway-Bold';
+    font-size: 12px;
+    font-weight: bold;
+    color: #424544;
+    text-transform: uppercase;
+    display: block;
+    margin-top: -7px;
+}
+
+.event-upcoming-list ul {
+    padding-bottom: 0px !important;
+}
+
+.more-event-button {
+    padding: 11px 20px !important;
+    font-family: 'Raleway-Bold';
+    text-align: center;
+    color: #ffffff !important;
+    background: #85bf43;
+    border-width: 0px !important;
+    border-radius: 4px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    font-weight: bold !important;
+    display: inline-block;
+}
+
+.event-upcoming-list .et_pb_widget {
+    text-align: center;
+}
+.more-event-button:hover {
+    background: #7cd01d !important;
+    border-radius: 4px;
+    letter-spacing: 0px;
+}
+
+.event-upcoming-list li {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px !important;
+    border-bottom: solid 2px #d9d9d9;
+}
+.event-upcoming-list li:last-of-type {
+    border-bottom: none;
+    margin-bottom: 19px !important;
+}
+
+.event-upcoming-list .event-content a.see-detail-event-button {
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: normal;
+    color: #ec912d;
+    border-radius: 4px;
+    border: solid 1px #ec912d;
+    display: inline-block;
+    text-transform: none;
+    padding-left: 9px;
+    padding-right: 9px;
+    line-height: 14px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 6px;
+}
+
+.event-upcoming-list .event-content a.see-detail-event-button:hover {
+    background: #ec912d;
+    color: #fff;
+}
+.event-upcoming-list .single-event-container {
+    display: inline-block;
+    width: 70%;
+}
+.event-upcoming-list .event-date .month {
+    text-transform: uppercase;
+    margin-top: -9px;
+    display: block;
+    font-family: 'Raleway';
+    font-size: 12.7px;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+    color: #424544;
+}
+.event-upcoming-list .et_pb_widget {
+    width: 100% !important;
+}
+
+.event-upcoming-list h4.widgettitle {
+    padding-bottom: 41px;
+    padding-top: 15px;
+    font-family: 'Raleway-ExtraBold';
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    color: #85bf43;
+}
+
+.event-upcoming-list .tc_upcoming_events_ul {
+    list-style: none;
+}
+
 .contact-text-block span.title {
     font-family: 'Raleway-ExtraBold';
     font-size: 14px;

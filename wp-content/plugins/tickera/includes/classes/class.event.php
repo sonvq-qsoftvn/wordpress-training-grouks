@@ -125,6 +125,56 @@ if ( !class_exists( 'TC_Event' ) ) {
 
 			return $event_date;
 		}
+        
+        function get_event_date_short( $event_id = false, $end_date = true ) {
+			if ( !$event_id ) {
+				$event_id = $this->id;
+			}
+			$event_start_date	 = get_post_meta( $event_id, 'event_date_time', true );
+
+			$start_date	 = date_i18n( '<\s\p\a\n \c\l\a\s\s\="\d\a\y">d</\s\p\a\n><\b\r><\s\p\a\n \c\l\a\s\s\="\m\o\n\t\h">F</\s\p\a\n>', strtotime( $event_start_date ) );			
+
+			
+            $event_date = $start_date;
+
+			return $event_date;
+		}
+        
+        function get_event_date_blocks( $event_id = false, $end_date = true ) {
+			if ( !$event_id ) {
+				$event_id = $this->id;
+			}
+			$event_start_date	 = get_post_meta( $event_id, 'event_date_time', true );
+			$event_end_date		 = get_post_meta( $event_id, 'event_end_date_time', true );
+
+			$start_date	 = date_i18n( 'd/m/Y', strtotime( $event_start_date ) );
+			$start_time	 = date_i18n( 'H:i', strtotime( $event_start_date ) );
+
+			$end_date	 = date_i18n( 'd/m/Y', strtotime( $event_end_date ) );
+			$end_time	 = date_i18n( 'H:i', strtotime( $event_end_date ) );
+
+			$show_time = apply_filters( 'tc_get_event_date_show_time', true );
+
+			if ( !empty( $event_end_date ) ) {
+				if ( $start_date == $end_date ) {
+					if ( $start_time == $end_time ) {
+						$event_date = '<span class="date-period">' . $start_date . '</span> ' . '<span class="time-period">' . ($show_time ? $start_time : '') . "</span>";
+					} else {
+						$event_date = '<span class="date-period">' . $start_date . '</span> ' . '<span class="time-period">' . ($show_time ? ($start_time . ' - ' . $end_time) : '') . "</span>";
+					}
+				} else {
+					if ( $start_time == $end_time ) {
+						$event_date = $start_date . ' - ' . $end_date . ' ' . ($show_time ? $start_time : '');
+					} else {
+						$event_date = $start_date . ($show_time ? (' ' . $start_time) : '') . ' - ' . $end_date . ($show_time ? (' ' . $end_time) : '');
+					}
+				}
+			} else {
+				$event_date = $start_date . ($show_time ? (' ' . $start_time) : '');
+			}
+
+			return $event_date;
+		}        
 
 		function restore_event( $event_id ) {
 			wp_untrash_post( $event_id );
