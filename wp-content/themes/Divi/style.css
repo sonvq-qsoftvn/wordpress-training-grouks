@@ -28,6 +28,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	font-weight: normal;  
 }
 
+.blurb-container .et_pb_main_blurb_image img {
+    width: 76px;
+    height: 76px;
+}
 .contact-page-map-container .et_pb_map {
     height: 180px !important;
     max-width: 520px;
@@ -318,6 +322,14 @@ flexible-text-container {
     max-width: 100% !important;
 }
 
+.mobile-element {
+    display: none;
+}
+
+.desktop-element {
+    display: block;
+}
+
 .custom-full-width-image-text .mobile-image {
     display: none;
 }
@@ -429,6 +441,29 @@ flexible-text-container {
     }
     .custom-full-width-image-text .desktop-image {
         display: none;
+    }
+    
+    .mobile-element {
+        display: block;
+    }
+
+    .desktop-element {
+        display: none;
+    }
+    
+    .about-grouks-text-block .centered-content {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .custom-full-width-image-text .et_pb_column {
+        text-align: center;
+    }
+    
+    .custom-full-width-image-text .et_pb_text { 
+        display: inline-block;
+        float: none !important;
     }
 }
 

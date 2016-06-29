@@ -33,14 +33,20 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
                                     <div class="container clearfix">
                                         <div class="et_pb_row footer-block-container">
                                             
+                                            <div class="et_pb_column et_pb_column_1_3 footer-logo mobile-element">
+                                                <a href="<?php echo get_home_url(); ?>">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" title="Grouks logo." alt="Grouks logo" data-actual-width="211" data-actual-height="67" />
+                                                </a>
+                                            </div>
+                                            
                                             <div class="et_pb_column et_pb_column_1_3 footer-text">
                                                 <p id="footer-info">
                                                     Chaussée de saint job 247, <br><br>1180 Bruxelles<br>+32 (0) 479 72 01 26<br><br>contact@grouks.be
                                                 </p>
                                             </div>
                                             
-                                            <div class="et_pb_column et_pb_column_1_3 footer-logo">
-                                                <a href="http://localhost/grouks/">
+                                            <div class="et_pb_column et_pb_column_1_3 footer-logo desktop-element">
+                                                <a href="<?php echo get_home_url(); ?>">
                                                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" title="Grouks logo." alt="Grouks logo" data-actual-width="211" data-actual-height="67" />
                                                 </a>
                                             </div>
