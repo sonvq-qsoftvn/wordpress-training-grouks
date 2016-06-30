@@ -36,11 +36,11 @@
             $('.contact-form-homepage button').html('SEND');
             $('.contact-form-contact-page button').html('SEND');
             function drawLine() {
-                if ($('p.down-text').length) {
+                if ($('.down-text').length) {
                     var offset = $('.flexible-text').position();
                     var downlineTop = offset.top + $('.flexible-text').height()/2 + 10;
                     var toplineTop = offset.top + 5;
-                    var widthOfDownLine = parseInt($('.flexible-text').css('marginLeft'))  + $('p.down-text').width();
+                    var widthOfDownLine = parseInt($('.flexible-text').css('marginLeft'))  + $('.down-text').width();
                     var widthOfUpLine = $('body').width() - widthOfDownLine - 5;
                     $('span.down-line').width(widthOfDownLine);
                     $('span.down-line').css({ top: downlineTop });

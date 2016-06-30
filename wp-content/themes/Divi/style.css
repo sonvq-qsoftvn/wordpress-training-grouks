@@ -283,8 +283,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     font-family: 'Raleway-Bold';
     margin-bottom: 16px;
 }
-
-.flexible-text p {
+.contact-form-contactpage h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #2e6594 !important;
+    font-family: 'Raleway-ExtraBold';
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 46px;
+    margin-bottom: 45px;
+}
+.flexible-text p, .flexible-text h1 {
     font-family: 'Raleway-Bold';
     font-size: 62px;
     font-weight: bold;
@@ -495,7 +504,7 @@ flexible-text-container {
         font-size: 15px;      
         margin-top: -27px;
     }
-    .flexible-text-container p.up-text, .flexible-text-container p.down-text {
+    .flexible-text-container .up-text, .flexible-text-container .down-text {
         font-size: 20px;
     } 
     .flexible-text {
