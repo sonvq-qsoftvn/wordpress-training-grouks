@@ -64,7 +64,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .event-upcoming-list .event-content {
     text-align: left;
-    width: calc(100% - 100px);
+    width: auto;
     display: inline-block;
 }
 
@@ -179,7 +179,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .event-upcoming-list .single-event-container {
     display: inline-block;
-    width: 70%;
+    width: auto;
 }
 .event-upcoming-list .event-date .month {
     text-transform: uppercase;
@@ -470,9 +470,7 @@ flexible-text-container {
         width: 100% !important;
         margin-right: 0px !important;
     }
-}
-
-@media all and (max-width: 768px) {
+    
     .event-upcoming-list .event-date {
         display: block;
         width: 100%;
@@ -487,6 +485,12 @@ flexible-text-container {
     .event-upcoming-list .event-content a.see-detail-event-button {
         margin-top: 0px;
     }
+    .event-upcoming-list .event-content {
+        width: auto;
+    }
+}
+
+@media all and (max-width: 768px) {    
     .image-fullwidth-block p {
         font-size: 15px;      
         margin-top: -27px;
