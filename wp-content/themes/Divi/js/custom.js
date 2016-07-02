@@ -35,18 +35,22 @@
 	$(document).ready( function(){
             $('.contact-form-homepage button').html('SEND');
             $('.contact-form-contact-page button').html('SEND');
-
+            //$('.custom-full-width-image-text .et_pb_column').equalHeights();
             function drawLine() {
-                if (window.matchMedia("(min-width: 980px)").matches) {
-                    $('.custom-full-width-image-text .et_pb_text').height($('.custom-full-width-image-text .et_pb_column').height());
-                } else {
-                    $('.custom-full-width-image-text .et_pb_text').css('height','auto');
-                }
+//                if (window.matchMedia("(min-width: 980px)").matches) {
+//                    $('.custom-full-width-image-text .et_pb_text').height($('.custom-full-width-image-text .et_pb_column').height());
+//                } else {
+//                    $('.custom-full-width-image-text .et_pb_text').css('height','auto');
+//                }
                 
                 if ($('.down-text').length) {
                     var offset = $('.flexible-text').position();
                     var downlineTop = offset.top + $('.flexible-text').height()/2 + 10;
-                    var toplineTop = offset.top + 5;
+                    if (window.matchMedia("(min-width: 769px)").matches) {
+                        var toplineTop = offset.top + 5;
+                    } else {
+                        var toplineTop = offset.top + 10;
+                    }
                     var widthOfDownLine = parseInt($('.flexible-text').css('marginLeft'))  + $('.down-text').width();
                     var widthOfUpLine = $('body').width() - widthOfDownLine - 5;
                     $('span.down-line').width(widthOfDownLine);

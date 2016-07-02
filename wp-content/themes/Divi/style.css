@@ -28,6 +28,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	font-weight: normal;  
 }
 
+.custom-full-width-image-text .centered-content h2 {
+    color: #ec912d !important;
+    font-family: 'Raleway-ExtraBold';
+    padding-bottom: 26px;
+    font-size: 30px;
+    font-weight: 800;
+}
 .blurb-container .et_pb_main_blurb_image img {
     width: 76px;
     height: 76px;
@@ -262,6 +269,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .about-grouks-block .et_pb_button:hover:after {
     opacity: 0;
 }
+.about-grouks-block h2 {
+    font-size: 30px;
+    color: #ec912d;
+    font-weight: 800;
+    font-family: 'Raleway-ExtraBold';
+    padding-bottom: 42px;
+}
 .image-fullwidth-block p {
     font-family: 'Raleway-Bold';
     font-size: 30px;
@@ -279,9 +293,30 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     margin-right: auto;
 }
 
-.how-we-work-homepage h1 {
+.homepage-contact-title h2 {
     font-family: 'Raleway-Bold';
-    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: center;
+    color: #ec912d;
+    margin-bottom: 36px;
+}
+.homepage-h4-titlte h4 {
+    font-family: 'Raleway-SemiBold';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.27;
+    text-align: center;
+    color: #424544;
+}
+.how-we-work-homepage h2 {
+    font-family: 'Raleway-Bold';
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8em;
+    text-align: center;
+    color: #85bf43;
 }
 .contact-form-contactpage h2 {
     font-weight: bold;
@@ -352,13 +387,16 @@ flexible-text-container {
     padding-bottom: 26px;
 }
 
-.about-content-block h1 {
+.about-content-block h2 {
+    font-weight: bold;
+    color: #85bf43 !important;
     font-family: 'Raleway-ExtraBold';
     text-align: center;
     padding-bottom: 42px;
+    font-size: 30px;
 }
 
-.about-content-block h2 {
+.about-content-block h3 {
     font-family: 'Raleway-Bold';
     font-size: 15px;
     font-weight: bold;
@@ -383,11 +421,14 @@ flexible-text-container {
     margin-top: -2px;
 }
 
-.training-content-block h1 {
+.training-content-block h2 {
+    font-weight: bold;
+    color: #85bf43 !important;
     text-align: center;
     font-family: 'Raleway-ExtraBold';
     padding-top: 15px;
     padding-bottom: 41px;
+    font-size: 30px;
 }
 
 .contact-form-contact-page .et_contact_bottom_container { 
@@ -440,7 +481,40 @@ flexible-text-container {
     margin-bottom: 31px;
 }
 
+.event-upcoming-list ul {
+    padding-left: 0px !important;
+}
+
+.home-h3-title h3 {
+    font-family: 'Raleway-Bold';
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #85bf43;
+}
+
 @media all and (max-width: 980px) {
+    .flexible-text-container {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .flexible-text-container img {
+        height: 480px;
+        max-width: none;
+        width: auto !important;
+    }
+    .custom-full-width-image-text .et_pb_column {
+        width: 47.25% !important;
+    }
+    
+    .custom-full-width-image-text .et_pb_text.first-about-text {
+        margin-top: 15px;
+    }
+    .custom-full-width-image-text .et_pb_column:first-of-type {
+        margin-right: 5.5%;
+    }
+    
     .et_pb_blurb_content {
         margin: auto !important;
     }
@@ -469,11 +543,7 @@ flexible-text-container {
     .custom-full-width-image-text .et_pb_column {
         text-align: center;
     }
-    
-    .custom-full-width-image-text .et_pb_text { 
-        display: inline-block;
-        float: none !important;
-    }
+        
     
     .event-upcoming-list .et_pb_column .et_pb_module .et_pb_widget {
         width: 100% !important;
@@ -505,8 +575,8 @@ flexible-text-container {
         margin-top: -27px;
     }
     .flexible-text-container .up-text, .flexible-text-container .down-text {
-        font-size: 20px;
-    } 
+        font-size: 30px;
+    }     
     .flexible-text {
         margin-top: -17px !important;        
     }
@@ -514,9 +584,28 @@ flexible-text-container {
     .contact-form-contact-page .et_pb_contact, .contact-form-contact-page .et-pb-contact-message {
         width: 100%;
     }
+    .about-content-block h2, .contact-form-contactpage h2, .training-content-block h2, 
+    .custom-full-width-image-text .centered-content h2, .event-upcoming-list h4.widgettitle, 
+    .homepage-contact-title h2, .how-we-work-homepage h2 {
+        font-size: 20px;
+    }     
+    
+    .about-grouks-block h2 {
+        font-size: 20px;
+    }
+    .flexible-text-container img {
+        height: 380px;
+        max-width: none;
+        width: auto !important;
+    }
 }
 
-@media all and (max-width: 479px) { 
+@media all and (max-width: 479px) {  
+    .flexible-text-container img {
+        height: 280px;
+        max-width: none;
+        width: auto !important;
+    }
     .event-upcoming-list .event-content a {
         line-height: 14px;
     }
@@ -539,6 +628,8 @@ flexible-text-container {
     .contact-form-contact-page .et_pb_contact p input, .contact-form-contact-page .et_pb_contact p textarea {
         width: 100%;
     }
+    
+    
 }
 
 /* Browser Reset */
