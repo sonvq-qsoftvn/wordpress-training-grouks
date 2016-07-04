@@ -48,7 +48,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     color: #ec912d !important;
 }
 .event-upcoming-list .event-date {
-    width: 62px;
+    width: 65px;
     vertical-align: top;
     margin-right: 32px;
     padding-left: 15.4px;
@@ -153,10 +153,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .event-upcoming-list li {
-    text-align: center;
+    text-align: left;
     padding-bottom: 30px;
     margin-bottom: 30px !important;
     border-bottom: solid 2px #d9d9d9;
+    padding-left: 20%;
 }
 .event-upcoming-list li:last-of-type {
     border-bottom: none;
@@ -494,6 +495,10 @@ flexible-text-container {
 }
 
 @media all and (max-width: 980px) {
+    .event-upcoming-list li {
+        padding-left: 0px;
+        text-align: center;
+    }
     .flexible-text-container {
         width: 100%;
         overflow: hidden;
