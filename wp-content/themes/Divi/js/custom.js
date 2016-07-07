@@ -37,11 +37,11 @@
             $('.contact-form-contact-page button').html('SEND');
             //$('.custom-full-width-image-text .et_pb_column').equalHeights();
             function drawLine() {
-                if (window.matchMedia("(min-width: 768px)").matches) {
-                    $('.custom-full-width-image-text .et_pb_text').height($('.custom-full-width-image-text img').height());
-                } else {
-                    $('.custom-full-width-image-text .et_pb_text').css('height','auto');
-                }
+//                if (window.matchMedia("(min-width: 768px)").matches) {
+                    $('.custom-full-width-image-text .equal-height').height($('.custom-full-width-image-text img').height());
+//                } else {
+//                    $('.custom-full-width-image-text .equal-height').css('height','auto');
+//                }
                 
                 if ($('.down-text').length) {
                     var offset = $('.flexible-text').position();
